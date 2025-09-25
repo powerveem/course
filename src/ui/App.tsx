@@ -14,8 +14,11 @@ export default function App(): React.ReactElement {
           <h1 className="hero-title">李柯竺</h1>
           <p className="hero-sub">用心培养每一个孩子的英语能力与自信</p>
 
-          <div style={{color:'#01b3fb',justifyContent:'left',marginRight:'auto',alignItems:'flex-end'}} className="subhead"><Icons.GraduationCap size={18} /><strong style={{color:'black'}}>专业能力</strong></div>
+          <div style={{color:'#01b3fb',justifyContent:'left',marginRight:'auto',alignItems:'flex-end'}} className="subhead"></div>
           <div className="capabilities">
+
+            <div style={{color:'#01b3fb',justifyContent:'left',marginRight:'auto',alignItems:'flex-end'}} className="subhead" ><Icons.GraduationCap size={18} /><strong style={{color:'black'}}>专业能力</strong></div>
+            <div  ></div>
             <div style={{padding: '5px',fontSize: '10px',justifyContent:'left',color:'#01b3fb'}} className="badge"><Icons.UserRound size={18} /><span>雅思7.5</span></div>
             <div style={{padding: '5px',fontSize: '10px',justifyContent:'left',color:'#01b3fb'}} className="badge"><Icons.BadgeCheck size={18} /><span>剑桥Celta证书</span></div>
             <div style={{padding: '5px',fontSize: '10px',justifyContent:'left',color:'#01b3fb'}} className="badge"><Icons.GraduationCap size={18} /><span>高中英语教师资格证</span></div>
@@ -87,7 +90,7 @@ export default function App(): React.ReactElement {
             <img key={idx} className="photo" src={src} alt={`作业${idx + 1}`} />
           ))}
         </div>
-        <div className="video-box card">
+        <div style={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}} className="video-box card">
           <h3>口语复述作业视频</h3>
           <button className="video-preview wide" onClick={() => setOpenKey('speaking')} aria-label="play speaking video">
             <video className="video-thumb" src={videos.speaking?.src} playsInline preload="metadata" muted />
